@@ -5,7 +5,7 @@ target-version = "py310"
 respect-gitignore = true
 extend-exclude = [
     # ROS2 test scripts
-    "src/**/test/*.py",
+    "**/test/*.py",
 ]
 
 [tool.ruff.lint]
