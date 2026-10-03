@@ -195,5 +195,5 @@ when given a bag.
 
 - Parts of this code were written with assistance from Claude (Anthropic).
   All results were run and checked by the authors.
-- Licence: the licence of the parent repository applies.
+- Licence: MIT, see `LICENSE` in this folder. It covers this folder only.
 - Contact: Anupama Ginige, a.ginige@westernsydney.edu.au
