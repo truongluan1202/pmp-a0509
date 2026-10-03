@@ -2,6 +2,8 @@
 
 Robot description and MoveIt config packages for Patient Mobility Project using [Doosan A0509](https://www.doosanrobotics.com/en/product-solutions/product/a-series/a0509/)
 
+## ACRA 2026 paper code
+The occupancy evaluation code, data and results for the paper are in [`pmp_occupancy_eval/`](pmp_occupancy_eval/).
 
 ## Package Dependencies
 - [doosan-robot2](https://github.com/DoosanRobotics/doosan-robot2) (**branch**: `humble` **commit**: [`37cc855`](https://github.com/DoosanRobotics/doosan-robot2/tree/37cc855b8c860d0367bbe88c6b7e139817724225))
