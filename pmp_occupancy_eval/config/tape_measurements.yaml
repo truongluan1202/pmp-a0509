@@ -1,0 +1,21 @@
+# Phantom tape measurements, Ruth Lee RLNPH50, supine on the study bed,
+# measured over the outer surface, 24 Sep 2026. Centimetres.
+# wide = straight across one part from above; tall = mattress up to highest point.
+body_cm:
+  head:      {wide: 15,   tall: 17}
+  neck:      {wide: 13,   tall: 10}
+  chest:     {wide: 42,   tall: 15.5}
+  hips:      {wide: 32,   tall: 11}
+  upper_arm: {wide: 25,   tall: 10}
+  lower_arm: {wide: 25,   tall: 8}
+  hand:      {wide: 10,   tall: 8}
+  thigh:     {wide: 40,   tall: 19}
+  lower_leg: {wide: 40,   tall: 12}
+  foot:      {wide: 10,   tall: 7.5}
+
+# Bed, centimetres. Reported in the paper; not used to build the grid.
+bed_cm:
+  mattress_length: 188
+  mattress_width: 90
+  floor_to_mattress_top: 50
+  camera_to_mattress_centre: 84

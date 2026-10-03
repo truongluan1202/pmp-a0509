@@ -1,0 +1,8 @@
+B1_neither_dynamic         subject frames  1816 by state {1: 1816} | seen readings 35098 (non-finite: 0; in frames not OK: 0) | pairs before SEARCHING with repeated confidence 84/84 | predicted frames 23 (1.27%), seen readings in them 200 (0.57%)
+B1_neither_static          subject frames  1690 by state {1: 1690} | seen readings 37437 (non-finite: 0; in frames not OK: 0) | pairs before SEARCHING with repeated confidence 0/0 | predicted frames 0 (0.00%), seen readings in them 0 (0.00%)
+B2_contrast_only_dynamic   subject frames  1424 by state {1: 1424} | seen readings 23898 (non-finite: 0; in frames not OK: 0) | pairs before SEARCHING with repeated confidence 98/98 | predicted frames 9 (0.63%), seen readings in them 106 (0.44%)
+B2_contrast_only_static    subject frames  1968 by state {1: 1968} | seen readings 32828 (non-finite: 0; in frames not OK: 0) | pairs before SEARCHING with repeated confidence 0/0 | predicted frames 0 (0.00%), seen readings in them 0 (0.00%)
+B4_both_dynamic            subject frames  1753 by state {0: 3, 1: 1749, 3: 1} | seen readings 37510 (non-finite: 0; in frames not OK: 23) | pairs before SEARCHING with repeated confidence 70/70 | predicted frames 16 (0.91%), seen readings in them 117 (0.31%)
+B4_both_static             subject frames  1350 by state {1: 1350} | seen readings 32196 (non-finite: 0; in frames not OK: 0) | pairs before SEARCHING with repeated confidence 0/0 | predicted frames 0 (0.00%), seen readings in them 0 (0.00%)
+
+ALL: subject frames 10001, of them SEARCHING 0; predicted frames 48 (0.48%); seen readings 198967, in predicted frames 423 (0.21%), in frames not OK 23; signature check 252/252

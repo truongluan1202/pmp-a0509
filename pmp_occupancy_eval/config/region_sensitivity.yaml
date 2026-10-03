@@ -1,0 +1,10 @@
+# Region sensitivity sigma in [0,1]. Higher = less contact force tolerated.
+# Grounded in pressure-injury vulnerability, not ISO/TS 15066 body regions.
+# These are design inputs, not measurements. Justify each in the paper.
+regions:
+  head:        1.00    # never acceptable contact
+  torso:       0.55    # broad load-bearing area
+  upper_limb:  0.70
+  lower_limb:  0.70
+  extremity:   0.85    # hands, feet: bony, thin soft-tissue cover
+default:       0.70

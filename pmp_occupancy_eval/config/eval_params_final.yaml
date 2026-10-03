@@ -1,0 +1,58 @@
+# Session 310826 configuration. All 310826 bags share this.
+detector:
+  confidence_threshold: 30.0
+  prediction_timeout_s: 0.5     # fixed by the wrapper, could not be disabled
+  enable_body_fitting: false
+  body_format: BODY_38
+  model: HUMAN_BODY_MEDIUM
+
+estimator:
+  v_hat_max: 0.60         # m/s, OVERWRITE from run_velocity.py output
+  a_max: 1.00             # s, must satisfy a_max <= D / v_hat_max
+  lam: 0.05               # soft-boundary decay length, metres
+  r0: 0.20                # baseline fixed radius
+  baseline_expiry: 0.50   # baseline deletes a keypoint after this age
+
+# Bed volume in the world frame. MEASURE AND OVERWRITE before trusting output.
+# Camera extrinsic: translation (0.170, -1.050, 0.380) m, 66.25 deg depression.
+bed_bounds:
+  x: [ 0.70, 0.95]
+  y: [-0.60, 1.30]
+  z: [-0.05, 0.65]
+
+query:
+  grid_res: 0.05
+  sweep_n: 200
+
+occlusion:
+  drop_fractions: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
+  drop_duration: 0.4
+  n_repeats: 5
+  seed: 0
+
+a_max_sweep: [0.25, 0.50, 0.75, 1.00, 1.50, 2.00, 3.00]
+
+# ---------------------------------------------------------------------------
+# Paper v2 analysis (ACRA). Consumed by scripts/run_paper_analysis.py only.
+# ---------------------------------------------------------------------------
+paper:
+  k_phys: 0.8                 # m/s, annotated point on the sweep; OVERWRITE
+                              # from run_velocity.py (distal, torso excluded)
+  k_sweep: [0.1, 0.2, 0.4, 0.6, 0.8, 1.0, 1.5, 2.0]
+  rho_grid: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  rho_for_k_sweep: [0.0, 0.3, 0.6, 0.9]   # k sweep uses this subset
+  n_repeats: 5
+  seed: 0
+  burst: auto                 # 'auto' = median natural gap per bag, else s
+  kp_conf_min: 30.0           # per-keypoint confidence gate = capture thresh
+  t_hold: 0.5                 # hold arm timeout (matches SDK window)
+  r0: d_contact               # hold arm base radius = proposed arm's, so
+                              # the arms differ only in temporal policy
+  subject_seed: [0.78, -0.24, 0.28]  # static-phantom torso median,
+                              # 310826 static bags; continuity tie-break
+  hysteresis: 0.10            # m, subject retention margin on bed bounds
+  max_gap_ref: 2.0            # s, gaps longer than this are not filled
+  grid_res: 0.05              # m, final submission run
+  frame_stride: 1             # every frame, final submission run
+  grid_margin: [0.0, 0.20, 0.20]  # m (x, y, z), evaluation grid only:
+                              # along the bed and across it, not vertical

@@ -1,0 +1,6 @@
+bag,arm,t_hold,gt_keypoints,gt_point_frames,missed,fse_gt
+B2_contrast_only_static,proposed,,23,2757479,1556,0.0005642835357948329
+B2_contrast_only_static,hold,0.5,23,2757479,80562,0.0292158163307862
+B2_contrast_only_static,hold,1,23,2757479,63174,0.022910056613305124
+B2_contrast_only_static,hold,2,23,2757479,56970,0.02066017547187123
+B2_contrast_only_static,hold,5,23,2757479,52242,0.018945565859250425
