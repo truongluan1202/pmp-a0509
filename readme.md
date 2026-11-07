@@ -20,7 +20,7 @@ The occupancy evaluation code, data and results for the paper are in [`pmp_occup
 ### Instructions
 #### 1. Clone
 ```bash
-git clone https://github.com/wsu-pmp/pmp-a0509.git
+git clone https://github.com/truongluan1202/pmp-a0509.git
 ```
 
 #### 2. Install Dev Dependencies
