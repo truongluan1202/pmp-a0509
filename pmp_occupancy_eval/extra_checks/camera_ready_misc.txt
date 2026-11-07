@@ -1,0 +1,23 @@
+A. second person
+  B1_neither_dynamic       frames  1817  >1 body  1023 (56.3%)  >1 body in bed volume  545 (30.0%)  other body nearest keypoint: median 0.23 m, min 0.00 m, frames < 0.3 m 756  ID changes 4
+  B1_neither_static        frames  1690  >1 body     0 ( 0.0%)  >1 body in bed volume    0 ( 0.0%)  ID changes 0
+  B2_contrast_only_dynamic frames  1424  >1 body   727 (51.1%)  >1 body in bed volume  324 (22.8%)  other body nearest keypoint: median 0.17 m, min 0.00 m, frames < 0.3 m 631  ID changes 0
+  B2_contrast_only_static  frames  1968  >1 body     4 ( 0.2%)  >1 body in bed volume    4 ( 0.2%)  other body nearest keypoint: median 0.04 m, min 0.03 m, frames < 0.3 m 4  ID changes 0
+  B4_both_dynamic          frames  1756  >1 body   791 (45.0%)  >1 body in bed volume  412 (23.5%)  other body nearest keypoint: median 0.15 m, min 0.01 m, frames < 0.3 m 754  ID changes 1
+  B4_both_static           frames  1350  >1 body    48 ( 3.6%)  >1 body in bed volume   48 ( 3.6%)  other body nearest keypoint: median 0.12 m, min 0.07 m, frames < 0.3 m 48  ID changes 0
+
+B. jitter on the still manikin (keypoints seen in >= 30 frames)
+  B1_neither_static        position spread (RMS about median): median 4 mm, range 1 to 352 mm
+                           hand and foot speed p95: frame differenced 0.21 m/s, fitted over 0.3 s 0.08 m/s  (all keypoints 0.27 / 0.08)
+  B2_contrast_only_static  position spread (RMS about median): median 4 mm, range 2 to 26 mm
+                           hand and foot speed p95: frame differenced 0.18 m/s, fitted over 0.3 s 0.05 m/s  (all keypoints 0.48 / 0.14)
+  B4_both_static           position spread (RMS about median): median 4 mm, range 2 to 20 mm
+                           hand and foot speed p95: frame differenced 0.14 m/s, fitted over 0.3 s 0.04 m/s  (all keypoints 0.28 / 0.07)
+
+C. pause rule: share of frames with oldest keypoint age > a_max
+  B1_neither_dynamic       all: >0.5s 80.7%, >1s 69.7%, >2s 62.1%   no fingers or toes: >0.5s 74.6%, >1s 67.2%, >2s 61.0%
+  B1_neither_static        all: >0.5s 51.5%, >1s 25.1%, >2s  1.8%   no fingers or toes: >0.5s 38.5%, >1s 17.0%, >2s  1.8%
+  B2_contrast_only_dynamic all: >0.5s 88.4%, >1s 81.1%, >2s 69.6%   no fingers or toes: >0.5s 75.3%, >1s 65.4%, >2s 45.0%
+  B2_contrast_only_static  all: >0.5s 96.2%, >1s 93.6%, >2s 90.6%   no fingers or toes: >0.5s 33.8%, >1s 30.9%, >2s 28.9%
+  B4_both_dynamic          all: >0.5s 67.1%, >1s 59.7%, >2s 47.8%   no fingers or toes: >0.5s 42.3%, >1s 28.1%, >2s 13.1%
+  B4_both_static           all: >0.5s  6.7%, >1s  4.5%, >2s  1.3%   no fingers or toes: >0.5s  1.9%, >1s  0.1%, >2s  0.0%

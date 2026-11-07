@@ -1,0 +1,6 @@
+rho = 0.6 independent, 2 repeats, mean over recordings of per-recording means (as Fig. 4)
+hold_0.5       recordings 6 runs 12  FSE_gap 6.49%  occ 23.9%
+hold_m10_0.5   recordings 6 runs 12  FSE_gap 2.56%  occ 44.8%
+cv_0.5         recordings 6 runs 12  FSE_gap 6.75%  occ 23.9%
+grow           recordings 6 runs 12  FSE_gap 0.08%  occ 83.6%
+grow_cap       recordings 6 runs 12  FSE_gap 0.14%  occ 64.5%
