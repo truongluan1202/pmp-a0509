@@ -35,7 +35,7 @@ recordings in total.
 | `final/`             | Results of the final run: merged CSVs, one subfolder per recording, and `figs/`. |
 | `sweep_thold/`       | Hold-last timeout sweep (1, 2 and 5 s) with the configuration used for each. |
 | `review/`            | Ablations per recording, and static ground truth checks for the static recordings. |
-| `extra_checks/`      | Further checks reported in the paper: the no growth row (k = 0), the share of predicted keypoints, and the contact radii against the tape measurements. Scripts and their outputs. |
+| `extra_checks/`      | Further checks reported in the paper: the no growth row (k = 0), the share of predicted keypoints, the contact radii against the tape measurements, and the camera-ready checks (further baselines, chain cap, stop rule, jitter, operator in the bed volume). Scripts and their outputs. |
 
 ## Setup
 
@@ -111,6 +111,15 @@ python3 extra_checks/k0_static.py               # k = 0 against the static refer
 python3 extra_checks/k0_inject.py               # k = 0 under injected dropout
 python3 extra_checks/check_predicted_frames.py  # share of keypoints predicted by the SDK
 python3 extra_checks/check_contact_radii.py     # contact radii against segment half thickness
+```
+
+**Camera-ready checks (Table 3 bottom rows, Sections 4.5, 5.1 and 6):**
+
+```bash
+python3 extra_checks/camera_ready_variants.py            # margin, constant velocity, growing deleted at 2 s, chain cap (rho = 0)
+python3 extra_checks/camera_ready_variants.py --rho 0.6 --reps 2  # the same policies with 60% of readings deleted (camera_ready_rho06_summary.txt)
+python3 extra_checks/camera_ready_summary.py > extra_checks/camera_ready_summary.txt   # Table 3 rows
+python3 extra_checks/camera_ready_misc.py > extra_checks/camera_ready_misc.txt   # operator in bed volume, jitter, stop rule
 ```
 
 The outputs of our runs are stored next to the scripts.
